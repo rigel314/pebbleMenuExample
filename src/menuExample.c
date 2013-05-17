@@ -23,13 +23,13 @@ void mainMenu_select_click(struct MenuLayer *menu_layer, MenuIndex *cell_index, 
 { // Show the detail view when select is pressed.
 	showDetail(cell_index); // Defined in detailView.c
 }
-void mainMenu_draw_row(GContext *ctx, Layer *cell_layer, MenuIndex *cell_index, void *callback_context)
+void mainMenu_draw_row(GContext *ctx, const Layer *cell_layer, MenuIndex *cell_index, void *callback_context)
 { // Adding the row number as text on the row cell.
 	graphics_context_set_text_color(ctx, GColorBlack); // This is important.
 	graphics_text_draw(ctx, hex+2*cell_index->row, fonts_get_system_font(FONT_KEY_GOTHIC_14), GRect(0,0,cell_layer->frame.size.w,cell_layer->frame.size.h), GTextOverflowModeTrailingEllipsis, GTextAlignmentCenter, NULL);
 	// Just saying cell_layer->frame for the 4th argument doesn't work.  Probably because the GContext is relative to the cell already, but the cell_layer.frame is relative to the menulayer or the screen or something.
 }
-void mainMenu_draw_header(GContext *ctx, Layer *cell_layer, uint16_t section_index, void *callback_context)
+void mainMenu_draw_header(GContext *ctx, const Layer *cell_layer, uint16_t section_index, void *callback_context)
 { // Adding the header number as text on the header cell.
 	graphics_context_set_text_color(ctx, GColorBlack); // This is important.
 	graphics_text_draw(ctx, hex+2*section_index, fonts_get_system_font(FONT_KEY_GOTHIC_14_BOLD), GRect(0,0,cell_layer->frame.size.w,cell_layer->frame.size.h), GTextOverflowModeTrailingEllipsis, GTextAlignmentCenter, NULL);
