@@ -1,0 +1,7 @@
+build/*
+.lock*
+
+# tempory files from various editors
+*~
+\#*\#
+*.swp
