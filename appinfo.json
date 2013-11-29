@@ -1,0 +1,17 @@
+{
+	"uuid": "2AC7ACEB-B6E2-4539-9EC2-B98AA68832C9",
+	"shortName": "MenuExample",
+	"longName": "Menu Example",
+	"companyName": "Computing Eureka",
+	"versionCode": 2,
+	"versionLabel": "2.0.0",
+	"watchapp": {
+		"watchface": false
+	},
+	"appKeys": {
+		"dummy": 0
+	},
+	"resources": {
+		"media": []
+	}
+}
